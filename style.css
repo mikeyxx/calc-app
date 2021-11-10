@@ -1,0 +1,206 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.calculator {
+  width: 16em;
+  background: #252424;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.calculator-display {
+  width: 100%;
+  min-height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .5em;
+  font-size: 30px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.ac {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: ac;
+}
+
+.del {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: del;
+}
+
+[data-action="remainder"] {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: remainder;
+}
+
+[data-action="divide"] {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: divide;
+}
+
+[data-action="times"] {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: times;
+}
+
+[data-action="plus"] {
+  -ms-grid-row: 3;
+  -ms-grid-column: 4;
+  grid-area: plus;
+}
+
+[data-action="minus"] {
+  -ms-grid-row: 4;
+  -ms-grid-column: 4;
+  grid-area: minus;
+}
+
+.equal {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: equal;
+}
+
+.seven {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: seven;
+}
+
+.eight {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: eight;
+}
+
+.nine {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: nine;
+}
+
+.ten {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: four;
+}
+
+.five {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: five;
+}
+
+.six {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: six;
+}
+
+.three {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: three;
+}
+
+.two {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: two;
+}
+
+.one {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+
+.zero {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: zero;
+}
+
+.decimal {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: dot;
+}
+
+.calculator-keys {
+  width: 100%;
+  height: 20em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (auto)[5];
+      grid-template-rows: repeat(5, auto);
+      grid-template-areas: 'ac del remainder divide' 'seven eight nine times' 'four five six plus' 'one two three minus' 'dot zero equal equal';
+}
+
+button {
+  color: white;
+  background: #1a1818;
+  font-size: 27px;
+}
+
+button:hover {
+  background: #383636;
+}
+
+button[data-type="number"] {
+  background-color: black;
+}
+
+button[data-type="number"]:hover {
+  background: #383636;
+}
+
+button[data-type="equal"] {
+  background-color: #0a6a91;
+}
+
+button[data-type="equal"]:hover {
+  background-color: #1295c9;
+}
+
+[data-state='selected'] {
+  background: #383636;
+}
+/*# sourceMappingURL=style.css.map */
