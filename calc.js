@@ -36,6 +36,12 @@ keys.addEventListener('click', event => {
             display.textContent = displayValue / 100
         }
     }
+    
+    if(type === 'decimal') {
+        if(!displayValue.includes('.')) {
+            display.textContent = displayValue + '.'
+        }
+    }
 
     if(type === 'equal') {
         const firstNumber = calculator.dataset.firstNumber
