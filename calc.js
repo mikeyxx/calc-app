@@ -30,6 +30,11 @@ keys.addEventListener('click', event => {
         calculator.dataset.firstNumber = displayValue
         calculator.dataset.operator = key.dataset.action
     }
+    
+    if(type === 'percent') {
+        if(displayValue !== 0) {
+            display.textContent = displayValue / 100
+    }
 
     if(type === 'equal') {
         const firstNumber = calculator.dataset.firstNumber
@@ -61,9 +66,7 @@ keys.addEventListener('click', event => {
 let result = ''
 
 function calculate(firstNumber, operator, secondNumber) {
-    if(operator === 'remainder') {
-    result = parseFloat(firstNumber) % parseFloat(secondNumber)
-    } else if(operator === 'divide') {
+    if(operator === 'divide') {
         result = parseFloat(firstNumber) / parseFloat(secondNumber)
     } else if(operator === 'times') {
         result = parseFloat(firstNumber) * parseFloat(secondNumber)
