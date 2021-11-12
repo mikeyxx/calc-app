@@ -42,8 +42,8 @@ body {
     grid-area: del;
 }
 
-[data-action="remainder"] {
-    grid-area: remainder;
+.percent {
+    grid-area: percent;
 }
 
 [data-action="divide"] {
