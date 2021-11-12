@@ -34,6 +34,7 @@ keys.addEventListener('click', event => {
     if(type === 'percent') {
         if(displayValue !== 0) {
             display.textContent = displayValue / 100
+        }
     }
 
     if(type === 'equal') {
