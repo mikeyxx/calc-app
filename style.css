@@ -59,10 +59,10 @@ body {
   grid-area: del;
 }
 
-[data-action="remainder"] {
+.percent {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
-  grid-area: remainder;
+  grid-area: percent;
 }
 
 [data-action="divide"] {
@@ -171,7 +171,11 @@ body {
       grid-template-columns: repeat(4, 1fr);
   -ms-grid-rows: (auto)[5];
       grid-template-rows: repeat(5, auto);
-      grid-template-areas: 'ac del remainder divide' 'seven eight nine times' 'four five six plus' 'one two three minus' 'dot zero equal equal';
+      grid-template-areas: 'ac del percent divide'
+ 'seven eight nine times'
+ 'four five six plus'
+ 'one two three minus'
+ 'dot zero equal equal';
 }
 
 button {
